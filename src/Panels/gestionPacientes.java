@@ -5,6 +5,7 @@ import Database.identificacionesCRUD;
 import Database.pacientesCRUD;
 import Entities.Pacientes;
 import Main.MainWindow;
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,6 +14,7 @@ public class gestionPacientes extends javax.swing.JInternalFrame {
     public gestionPacientes() {
         initComponents();
         cargarPacientes();
+        this.setBackground(new Color(0,170,181));
     }
 
     @SuppressWarnings("unchecked")
@@ -51,9 +53,12 @@ public class gestionPacientes extends javax.swing.JInternalFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
 
+        jLabel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Paciente:");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("(ingresa los datos del paciente)");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -67,7 +72,7 @@ public class gestionPacientes extends javax.swing.JInternalFrame {
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,6 +104,8 @@ public class gestionPacientes extends javax.swing.JInternalFrame {
         tblListaPacientes.setComponentPopupMenu(popMenu);
         jScrollPane1.setViewportView(tblListaPacientes);
 
+        btnNuevo.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(51, 51, 51));
         btnNuevo.setText("Nuevo");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

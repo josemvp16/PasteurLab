@@ -3,6 +3,7 @@ package Panels;
 
 import Database.identificacionesCRUD;
 import Entities.Identificaciones;
+import java.awt.Color;
 
 public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
 
@@ -10,6 +11,7 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
     
     public CreateUpdateIdentificaciones() {
         initComponents();
+        this.setBackground(new Color(0,170,181));
         accion = "Crear";
     }
 
@@ -50,19 +52,30 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
         jLabel12 = new javax.swing.JLabel();
         cmbEstado = new javax.swing.JComboBox();
         btnGuardarRegistro = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
 
         setClosable(true);
 
+        jLabel1.setFont(new java.awt.Font("Euphemia", 1, 14)); // NOI18N
         jLabel1.setText("Registro de Identificaciones");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre"));
+        jPanel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Primer Nombre:");
 
+        jLabel3.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 51));
         jLabel3.setText("Segundo Nombre:");
 
+        jLabel4.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 51));
         jLabel4.setText("Apellido Paterno:");
 
+        jLabel5.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
         jLabel5.setText("Apellido Materno:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -112,22 +125,38 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel6.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 51));
         jLabel6.setText("ClaveID:");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Domicilio"));
 
+        jLabel7.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 51));
         jLabel7.setText("Calle:");
 
+        jLabel8.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 51));
         jLabel8.setText("Numero:");
 
+        jLabel9.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 51));
         jLabel9.setText("Colonia:");
 
+        jLabel10.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 51));
         jLabel10.setText("Localidad:");
 
+        jLabel11.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 51));
         jLabel11.setText("Municipio:");
 
+        jLabel12.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 51));
         jLabel12.setText("Estado:");
 
+        cmbEstado.setFont(new java.awt.Font("Euphemia", 0, 11)); // NOI18N
+        cmbEstado.setForeground(new java.awt.Color(0, 0, 102));
         cmbEstado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima", "Distrito Federal", "Durango", "Estado de México", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas" }));
         cmbEstado.setSelectedItem("Hidalgo");
 
@@ -194,6 +223,8 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnGuardarRegistro.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btnGuardarRegistro.setForeground(new java.awt.Color(51, 51, 51));
         btnGuardarRegistro.setText("Guardar Registro");
         btnGuardarRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,38 +232,48 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/alta.png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel13)
+                        .addGap(266, 266, 266)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnGuardarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtClaveID, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnGuardarRegistro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                                .addComponent(txtClaveID, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtClaveID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtClaveID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel13)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -276,6 +317,7 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

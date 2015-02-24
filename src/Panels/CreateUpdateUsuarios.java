@@ -3,6 +3,7 @@ package Panels;
 
 import Database.usuariosCRUD;
 import Entities.Usuarios;
+import java.awt.Color;
 
 public class CreateUpdateUsuarios extends javax.swing.JInternalFrame {
 
@@ -10,6 +11,7 @@ public class CreateUpdateUsuarios extends javax.swing.JInternalFrame {
     
     public CreateUpdateUsuarios() {
         initComponents();
+        this.setBackground(new Color(0,170,181));
         accion = "Crear";
     }
     
@@ -33,30 +35,48 @@ public class CreateUpdateUsuarios extends javax.swing.JInternalFrame {
         cmbActivo = new javax.swing.JComboBox();
         btGuardarRegistro = new javax.swing.JButton();
         txtContrasena = new javax.swing.JPasswordField();
+        jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
         setTitle("Usuarios");
 
+        jLabel1.setFont(new java.awt.Font("Euphemia", 1, 14)); // NOI18N
         jLabel1.setText("Registro de Usuarios");
 
+        jLabel2.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Usuario:");
 
+        jLabel3.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 51));
         jLabel3.setText("Contraseña:");
 
+        jLabel4.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 51));
         jLabel4.setText("Tipo de Cuenta:");
 
+        cmbTipoCuenta.setFont(new java.awt.Font("Euphemia", 0, 11)); // NOI18N
+        cmbTipoCuenta.setForeground(new java.awt.Color(0, 0, 102));
         cmbTipoCuenta.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Administrador", "Recepcion", "Produccion", "Gerencia" }));
 
+        jLabel5.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
         jLabel5.setText("Activo:");
 
+        cmbActivo.setFont(new java.awt.Font("Euphemia", 0, 11)); // NOI18N
+        cmbActivo.setForeground(new java.awt.Color(0, 0, 102));
         cmbActivo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SI", "NO" }));
 
+        btGuardarRegistro.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btGuardarRegistro.setForeground(new java.awt.Color(51, 51, 51));
         btGuardarRegistro.setText("Guardar Registro");
         btGuardarRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btGuardarRegistroActionPerformed(evt);
             }
         });
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/reguser.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,25 +85,32 @@ public class CreateUpdateUsuarios extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btGuardarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btGuardarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbTipoCuenta, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cmbActivo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addComponent(jLabel2)
-                        .addComponent(txtUsuario)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel4)
-                        .addComponent(cmbTipoCuenta, 0, 200, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addComponent(cmbActivo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtContrasena)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel6)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addComponent(jLabel6))
+                .addGap(24, 24, 24)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,6 +160,7 @@ public class CreateUpdateUsuarios extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPasswordField txtContrasena;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables

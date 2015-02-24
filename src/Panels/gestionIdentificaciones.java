@@ -4,6 +4,7 @@ package Panels;
 import Database.identificacionesCRUD;
 import Entities.Identificaciones;
 import Main.MainWindow;
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -14,6 +15,7 @@ public class gestionIdentificaciones extends javax.swing.JInternalFrame {
     public gestionIdentificaciones() {
         initComponents();
         cargarIdentificaciones();
+        this.setBackground(new Color(0,170,181));
         accion = "Nuevo";
     }
     
@@ -60,10 +62,14 @@ public class gestionIdentificaciones extends javax.swing.JInternalFrame {
         setInheritsPopupMenu(true);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
+        jPanel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
 
+        jLabel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Identificación:");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("(ingresa los datos de identificación)");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -77,7 +83,7 @@ public class gestionIdentificaciones extends javax.swing.JInternalFrame {
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,6 +122,8 @@ public class gestionIdentificaciones extends javax.swing.JInternalFrame {
         tblListaIdentificaciones.setComponentPopupMenu(popMenu);
         jScrollPane2.setViewportView(tblListaIdentificaciones);
 
+        btnNuevo.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(51, 51, 51));
         btnNuevo.setText("Nuevo");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

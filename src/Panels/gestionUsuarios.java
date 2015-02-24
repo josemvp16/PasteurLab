@@ -4,6 +4,7 @@ package Panels;
 import Database.usuariosCRUD;
 import Entities.Usuarios;
 import Main.MainWindow;
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -12,6 +13,7 @@ public class gestionUsuarios extends javax.swing.JInternalFrame {
     public gestionUsuarios() {
         initComponents();
         cargarUsuarios();
+        this.setBackground(new Color(0,170,181));
     }
 
     @SuppressWarnings("unchecked")
@@ -78,6 +80,8 @@ public class gestionUsuarios extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tblListaUsuarios);
 
+        btnNuevo.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(51, 51, 51));
         btnNuevo.setText("Nuevo");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,9 +91,12 @@ public class gestionUsuarios extends javax.swing.JInternalFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
 
+        jLabel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Usuario:");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("(ingresa el nombre de usuario)");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -103,7 +110,7 @@ public class gestionUsuarios extends javax.swing.JInternalFrame {
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

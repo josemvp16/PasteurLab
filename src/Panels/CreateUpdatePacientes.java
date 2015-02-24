@@ -5,6 +5,7 @@ import Database.identificacionesCRUD;
 import Database.pacientesCRUD;
 import Entities.Pacientes;
 import Main.MainWindow;
+import java.awt.Color;
 
 public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
 
@@ -13,6 +14,7 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
     public CreateUpdatePacientes() {
         initComponents();
         accion = "Crear";
+        this.setBackground(new Color(0,170,181));
     }
     
     public CreateUpdatePacientes(Pacientes paciente) {
@@ -43,28 +45,48 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
         datFechaRegistro = new com.toedter.calendar.JDateChooser();
         jLabel8 = new javax.swing.JLabel();
         btnGuardarRegistro = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setClosable(true);
         setTitle("Pacientes");
 
+        jLabel1.setFont(new java.awt.Font("Euphemia", 1, 14)); // NOI18N
         jLabel1.setText("Registro de Pacientes");
 
+        jLabel2.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Fecha de Nacimiento:");
 
+        jLabel3.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 51));
         jLabel3.setText("Teléfono:");
 
+        jLabel4.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 51));
         jLabel4.setText("Sexo:");
 
+        cmbSexo.setFont(new java.awt.Font("Euphemia", 0, 11)); // NOI18N
+        cmbSexo.setForeground(new java.awt.Color(0, 51, 102));
         cmbSexo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mujer", "Hombre" }));
 
+        jLabel5.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
         jLabel5.setText("Correo Electrónico:");
 
+        jLabel6.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 51));
         jLabel6.setText("Facebook:");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("ClaveID"));
+        jPanel1.setForeground(new java.awt.Color(0, 0, 51));
+        jPanel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
 
+        jLabel7.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 51));
         jLabel7.setText("Identificacion:");
 
+        jButton1.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("Buscar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,14 +120,20 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel8.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 51));
         jLabel8.setText("Fecha de Registro:");
 
+        btnGuardarRegistro.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btnGuardarRegistro.setForeground(new java.awt.Color(51, 51, 51));
         btnGuardarRegistro.setText("Guardar Registro");
         btnGuardarRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarRegistroActionPerformed(evt);
             }
         });
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/pac.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,20 +142,6 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addGap(110, 110, 110)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel6))))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtCorreoElectronico, javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,15 +155,35 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
                             .addComponent(txtFacebook)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnGuardarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnGuardarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel9))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5))
+                                .addGap(98, 98, 98)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel6))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addComponent(jLabel9))
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,6 +263,7 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JTextField txtClaveID;
     private javax.swing.JTextField txtCorreoElectronico;

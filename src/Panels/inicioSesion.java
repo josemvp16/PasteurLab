@@ -5,11 +5,13 @@ import Database.usuariosCRUD;
 import Entities.Usuarios;
 import Main.MainWindow;
 import Main.Mensajes;
+import java.awt.Color;
 
 public class inicioSesion extends javax.swing.JInternalFrame {
 
     public inicioSesion() {
         initComponents();
+        this.setBackground(new Color(76,77,89));
     }
 
     @SuppressWarnings("unchecked")
@@ -27,6 +29,8 @@ public class inicioSesion extends javax.swing.JInternalFrame {
         setClosable(true);
         setTitle("Sesión");
 
+        jLabel1.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("Usuario:");
 
         txtUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -36,6 +40,8 @@ public class inicioSesion extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setText("Contraseña:");
 
         pswContrasena.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -45,6 +51,8 @@ public class inicioSesion extends javax.swing.JInternalFrame {
             }
         });
 
+        btnIngresar.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(51, 51, 51));
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +78,7 @@ public class inicioSesion extends javax.swing.JInternalFrame {
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                             .addComponent(pswContrasena)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
