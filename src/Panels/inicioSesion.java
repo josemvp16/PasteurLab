@@ -1,10 +1,10 @@
 
 package Panels;
 
-import Database.usuarioSesion;
+import Database.usuariosCRUD;
+import Entities.Usuarios;
 import Main.MainWindow;
-import java.awt.Toolkit;
-import javax.swing.JOptionPane;
+import Main.Mensajes;
 
 public class inicioSesion extends javax.swing.JInternalFrame {
 
@@ -122,14 +122,18 @@ public class inicioSesion extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
 
     private void accesSystem(String usr, String psw) {
-        MainWindow.userSystem = new usuarioSesion().startSesion(usr, psw);
+        usuariosCRUD users = new usuariosCRUD();
+        Usuarios usuario = users.read(usr);
+        if(usuario != null)
+            if(txtUsuario.getText().equals(usuario.getUsuario()) && pswContrasena.getText().equals(usuario.getContrasena()))
+                MainWindow.userSystem = usuario;
         if(MainWindow.userSystem != null){
             MainWindow.enableAdmin(true);
             MainWindow.activateSesion(true);
             dispose();
         }else{
-            Toolkit.getDefaultToolkit().beep();
-            JOptionPane.showMessageDialog(null, "Los datos de usuario son incorrectos: ", "Usuarios [Base de Datos]", JOptionPane.ERROR_MESSAGE);
+            new Mensajes("Los datos de usuario son incorrectos.","Sesión").showMensaje(1);
         }
+        users.closeCRUD();
     }
 }

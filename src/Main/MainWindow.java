@@ -2,17 +2,18 @@
 package Main;
 
 import Database.ConexionSGBD;
-import Entities.Usuario;
-import Panels.createPaciente;
+import Entities.Usuarios;
 import Panels.inicioSesion;
-import Panels.readPaciente;
 import Files.readFile;
+import Panels.gestionIdentificaciones;
+import Panels.gestionPacientes;
+import Panels.gestionUsuarios;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class MainWindow extends javax.swing.JFrame {
     
-    public static Usuario userSystem;
+    public static Usuarios userSystem;
 
     public MainWindow() {
         initComponents();
@@ -35,8 +36,10 @@ public class MainWindow extends javax.swing.JFrame {
         mniCambiarUsuario = new javax.swing.JMenuItem();
         mniSalir = new javax.swing.JMenuItem();
         menuPacientes = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        menuUsuarios = new javax.swing.JMenu();
+        menuGestionarUsuario = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -115,23 +118,36 @@ public class MainWindow extends javax.swing.JFrame {
         menuPacientes.setText("Pacientes");
         menuPacientes.setEnabled(false);
 
-        jMenuItem1.setText("Registrar Paciente");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem3.setText("Gestionar Identificaciones");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem3ActionPerformed(evt);
             }
         });
-        menuPacientes.add(jMenuItem1);
+        menuPacientes.add(jMenuItem3);
 
-        jMenuItem2.setText("Buscar Registro Paciente");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem4.setText("Gestionar Pacientes");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem4ActionPerformed(evt);
             }
         });
-        menuPacientes.add(jMenuItem2);
+        menuPacientes.add(jMenuItem4);
 
         barraMenu.add(menuPacientes);
+
+        menuUsuarios.setText("Usuarios");
+        menuUsuarios.setEnabled(false);
+
+        menuGestionarUsuario.setText("Gestionar");
+        menuGestionarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuGestionarUsuarioActionPerformed(evt);
+            }
+        });
+        menuUsuarios.add(menuGestionarUsuario);
+
+        barraMenu.add(menuUsuarios);
 
         setJMenuBar(barraMenu);
 
@@ -185,18 +201,6 @@ public class MainWindow extends javax.swing.JFrame {
         enableAdmin(false);
     }//GEN-LAST:event_mniCerrarSesionActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        createPaciente cp = new createPaciente();
-        cp.show();
-        MainDesktop.add(cp);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        readPaciente rp = new readPaciente();
-        rp.show();
-        MainDesktop.add(rp);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void btnConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConectarActionPerformed
         if(initDatabase()){
             btnConectar.setEnabled(false);
@@ -204,11 +208,28 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnConectarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void menuGestionarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuGestionarUsuarioActionPerformed
+        gestionUsuarios gu = new gestionUsuarios();
+        gu.show();
+        MainDesktop.add(gu);
+        gu.toFront();
+    }//GEN-LAST:event_menuGestionarUsuarioActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        gestionIdentificaciones gi = new gestionIdentificaciones();
+        gi.show();
+        MainDesktop.add(gi);
+        gi.toFront();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        gestionPacientes gp = new gestionPacientes();
+        gp.show();
+        MainDesktop.add(gp);
+        gp.toFront();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -231,7 +252,6 @@ public class MainWindow extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainWindow().setVisible(true);
@@ -244,12 +264,14 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuBar barraMenu;
     public static javax.swing.JButton btnConectar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel leftPanel;
+    private javax.swing.JMenuItem menuGestionarUsuario;
     private javax.swing.JMenu menuLabSystem;
     public static javax.swing.JMenu menuPacientes;
+    public static javax.swing.JMenu menuUsuarios;
     public static javax.swing.JMenuItem mniCambiarUsuario;
     public static javax.swing.JMenuItem mniCerrarSesion;
     public static javax.swing.JMenuItem mniIniciarSesion;
@@ -262,6 +284,7 @@ public class MainWindow extends javax.swing.JFrame {
 
     public static void enableAdmin(boolean est){
         menuPacientes.setEnabled(est);
+        menuUsuarios.setEnabled(est);
     }
     
     public static void activateSesion(boolean est){
