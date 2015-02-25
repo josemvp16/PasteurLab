@@ -4,7 +4,6 @@ package Panels;
 import Database.usuariosCRUD;
 import Entities.Usuarios;
 import Main.MainWindow;
-import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,7 +12,7 @@ public class gestionUsuarios extends javax.swing.JInternalFrame {
     public gestionUsuarios() {
         initComponents();
         cargarUsuarios();
-        this.setBackground(new Color(0,170,181));
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -47,9 +46,11 @@ public class gestionUsuarios extends javax.swing.JInternalFrame {
         });
         popMenu.add(Eliminar);
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
-        setTitle("Usuraios");
+        setTitle("Usuarios");
 
+        tblListaUsuarios.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
         tblListaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null}
@@ -89,7 +90,9 @@ public class gestionUsuarios extends javax.swing.JInternalFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Euphemia", 1, 16), new java.awt.Color(0, 0, 51))); // NOI18N
+        jPanel1.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 51));

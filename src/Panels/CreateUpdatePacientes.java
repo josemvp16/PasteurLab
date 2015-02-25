@@ -5,7 +5,7 @@ import Database.identificacionesCRUD;
 import Database.pacientesCRUD;
 import Entities.Pacientes;
 import Main.MainWindow;
-import java.awt.Color;
+
 
 public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
 
@@ -14,7 +14,7 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
     public CreateUpdatePacientes() {
         initComponents();
         accion = "Crear";
-        this.setBackground(new Color(0,170,181));
+        
     }
     
     public CreateUpdatePacientes(Pacientes paciente) {
@@ -47,6 +47,7 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
         btnGuardarRegistro = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
         setTitle("Pacientes");
 
@@ -77,7 +78,8 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
         jLabel6.setForeground(new java.awt.Color(0, 0, 51));
         jLabel6.setText("Facebook:");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("ClaveID"));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ClaveID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Euphemia", 1, 11), new java.awt.Color(0, 0, 51))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(0, 0, 51));
         jPanel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
 
@@ -133,7 +135,7 @@ public class CreateUpdatePacientes extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/pac.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/doc48x48.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

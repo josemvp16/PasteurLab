@@ -45,6 +45,8 @@ public class MainWindow extends javax.swing.JFrame {
 
         leftPanel.setBackground(new java.awt.Color(0, 170, 181));
 
+        btnConectar.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
+        btnConectar.setForeground(new java.awt.Color(51, 51, 51));
         btnConectar.setText("Conectar");
         btnConectar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +66,7 @@ public class MainWindow extends javax.swing.JFrame {
         leftPanelLayout.setVerticalGroup(
             leftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leftPanelLayout.createSequentialGroup()
-                .addContainerGap(551, Short.MAX_VALUE)
+                .addContainerGap(553, Short.MAX_VALUE)
                 .addComponent(btnConectar)
                 .addContainerGap())
         );
@@ -78,7 +80,11 @@ public class MainWindow extends javax.swing.JFrame {
         MainDesktop.setOpaque(false);
 
         menuLabSystem.setText("LabSystem");
+        menuLabSystem.setFont(new java.awt.Font("Euphemia", 0, 14)); // NOI18N
 
+        mniIniciarSesion.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        mniIniciarSesion.setForeground(new java.awt.Color(0, 0, 51));
+        mniIniciarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/entra24x24.png"))); // NOI18N
         mniIniciarSesion.setText("Iniciar Sesión");
         mniIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +93,9 @@ public class MainWindow extends javax.swing.JFrame {
         });
         menuLabSystem.add(mniIniciarSesion);
 
+        mniCerrarSesion.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        mniCerrarSesion.setForeground(new java.awt.Color(0, 0, 51));
+        mniCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/canda24x24.png"))); // NOI18N
         mniCerrarSesion.setText("Cerrar Sesión");
         mniCerrarSesion.setEnabled(false);
         mniCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -96,6 +105,9 @@ public class MainWindow extends javax.swing.JFrame {
         });
         menuLabSystem.add(mniCerrarSesion);
 
+        mniCambiarUsuario.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        mniCambiarUsuario.setForeground(new java.awt.Color(0, 0, 51));
+        mniCambiarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cambia24x24.png"))); // NOI18N
         mniCambiarUsuario.setText("Cambiar Usuario");
         mniCambiarUsuario.setEnabled(false);
         mniCambiarUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +117,9 @@ public class MainWindow extends javax.swing.JFrame {
         });
         menuLabSystem.add(mniCambiarUsuario);
 
+        mniSalir.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        mniSalir.setForeground(new java.awt.Color(0, 0, 51));
+        mniSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/sali24x24.png"))); // NOI18N
         mniSalir.setText("Salir");
         mniSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +132,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         menuPacientes.setText("Pacientes");
         menuPacientes.setEnabled(false);
+        menuPacientes.setFont(new java.awt.Font("Euphemia", 0, 14)); // NOI18N
 
+        jMenuItem3.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jMenuItem3.setForeground(new java.awt.Color(0, 0, 51));
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cred24x24.png"))); // NOI18N
         jMenuItem3.setText("Gestionar Identificaciones");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +145,9 @@ public class MainWindow extends javax.swing.JFrame {
         });
         menuPacientes.add(jMenuItem3);
 
+        jMenuItem4.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        jMenuItem4.setForeground(new java.awt.Color(0, 0, 51));
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/gest24x24.png"))); // NOI18N
         jMenuItem4.setText("Gestionar Pacientes");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +160,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         menuUsuarios.setText("Usuarios");
         menuUsuarios.setEnabled(false);
+        menuUsuarios.setFont(new java.awt.Font("Euphemia", 0, 14)); // NOI18N
 
+        menuGestionarUsuario.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
+        menuGestionarUsuario.setForeground(new java.awt.Color(0, 0, 51));
+        menuGestionarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/usua24x24.png"))); // NOI18N
         menuGestionarUsuario.setText("Gestionar");
         menuGestionarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

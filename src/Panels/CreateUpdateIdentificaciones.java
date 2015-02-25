@@ -3,7 +3,7 @@ package Panels;
 
 import Database.identificacionesCRUD;
 import Entities.Identificaciones;
-import java.awt.Color;
+
 
 public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
 
@@ -11,7 +11,6 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
     
     public CreateUpdateIdentificaciones() {
         initComponents();
-        this.setBackground(new Color(0,170,181));
         accion = "Crear";
     }
 
@@ -54,12 +53,14 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
         btnGuardarRegistro = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
 
         jLabel1.setFont(new java.awt.Font("Euphemia", 1, 14)); // NOI18N
         jLabel1.setText("Registro de Identificaciones");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre"));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Euphemia", 1, 11), new java.awt.Color(0, 0, 51))); // NOI18N
         jPanel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
@@ -129,7 +130,8 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
         jLabel6.setForeground(new java.awt.Color(0, 0, 51));
         jLabel6.setText("ClaveID:");
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Domicilio"));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Domicilio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Euphemia", 1, 11), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 51));
@@ -232,7 +234,7 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/alta.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/crede48x48.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -247,7 +249,7 @@ public class CreateUpdateIdentificaciones extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel13)
-                        .addGap(266, 266, 266)
+                        .addGap(268, 268, 268)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

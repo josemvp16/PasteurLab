@@ -5,13 +5,12 @@ import Database.usuariosCRUD;
 import Entities.Usuarios;
 import Main.MainWindow;
 import Main.Mensajes;
-import java.awt.Color;
+
 
 public class inicioSesion extends javax.swing.JInternalFrame {
 
     public inicioSesion() {
         initComponents();
-        this.setBackground(new Color(76,77,89));
     }
 
     @SuppressWarnings("unchecked")
@@ -30,7 +29,7 @@ public class inicioSesion extends javax.swing.JInternalFrame {
         setTitle("Sesión");
 
         jLabel1.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Usuario:");
 
         txtUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -41,7 +40,7 @@ public class inicioSesion extends javax.swing.JInternalFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Euphemia", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Contraseña:");
 
         pswContrasena.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -60,7 +59,7 @@ public class inicioSesion extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/User.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/user80x80.png"))); // NOI18N
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -69,7 +68,7 @@ public class inicioSesion extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -78,7 +77,7 @@ public class inicioSesion extends javax.swing.JInternalFrame {
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
                             .addComponent(pswContrasena)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -101,7 +100,7 @@ public class inicioSesion extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnIngresar))
                     .addComponent(jLabel3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();

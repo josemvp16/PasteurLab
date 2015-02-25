@@ -4,7 +4,6 @@ package Panels;
 import Database.identificacionesCRUD;
 import Entities.Identificaciones;
 import Main.MainWindow;
-import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -15,7 +14,7 @@ public class gestionIdentificaciones extends javax.swing.JInternalFrame {
     public gestionIdentificaciones() {
         initComponents();
         cargarIdentificaciones();
-        this.setBackground(new Color(0,170,181));
+        
         accion = "Nuevo";
     }
     
@@ -57,11 +56,13 @@ public class gestionIdentificaciones extends javax.swing.JInternalFrame {
         });
         popMenu.add(Eliminar);
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
         setTitle("Identificaciones");
         setInheritsPopupMenu(true);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Euphemia", 1, 11), new java.awt.Color(0, 0, 51))); // NOI18N
         jPanel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Euphemia", 0, 12)); // NOI18N
